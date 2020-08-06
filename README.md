@@ -1,8 +1,8 @@
 # Base360 for C++
-## Made as a joke / for a bet
+#### Made as a joke / for a bet
 
 # Usage
-## Encode
+### Encode
 ```cpp
 #include "Base360.h"
 
@@ -12,7 +12,7 @@ int main()
     std::string encoded_text =  base360_encode(1234); // 😁🐮
 }
 ```
-## Decode
+### Decode
 ```cpp
 #include "Base360.h"
 
