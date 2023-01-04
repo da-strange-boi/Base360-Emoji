@@ -1,8 +1,12 @@
 {
     "name": "base360-emoji",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "description": "😀 A trecentosexagesimal (360) numeral system themed around emojis",
-    "main": "src/index.js",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist/**/*"
+    ],
     "scripts": {
         "test": "node test/test.js"
     },
@@ -11,12 +15,17 @@
         "url": "git+https://github.com/da-strange-boi/Base360-Emoji.git"
     },
     "keywords": [
-        "Base360"
+        "base360",
+        "emoji",
+        "bigint"
     ],
     "author": "da-strange-boi",
     "license": "UNLICENSED",
     "bugs": {
         "url": "https://github.com/da-strange-boi/Base360-Emoji/issues"
     },
-    "homepage": "https://github.com/da-strange-boi/Base360-Emoji#readme"
+    "homepage": "https://github.com/da-strange-boi/Base360-Emoji#readme",
+    "devDependencies": {
+        "typescript": "^4.9.4"
+    }
 }

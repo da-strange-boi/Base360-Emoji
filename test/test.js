@@ -1,4 +1,4 @@
-const Base360 = require('../src/index.js');
+const Base360 = require('../dist/index.js');
 
 /** Sample size for test amounts */
 const SAMPLE_SIZE = 1000;

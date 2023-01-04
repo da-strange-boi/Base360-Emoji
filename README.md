@@ -24,5 +24,5 @@ const decoded = Base360.decode(encoded); // 100000000000000000000n
 
 ## Todo
 
-* Figure out which is faster `new RegExp('.{1,2}', 'g');` or `Buffer.from("😀😄").slice(0, 4).toString()`
 * Does this actually save space for larger numbers than base10, base16, and base32?
+* Time complexity of the functions

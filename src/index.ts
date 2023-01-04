@@ -28,7 +28,7 @@ const EMOJI_SPLIT_RE = new RegExp('.{1,2}', 'g');
  * @param {Number|String|BigInt|Boolean} integer Any numeral value
  * @returns {String}
  */
-const encode = (integer) => {
+const encode = (integer: number|string|bigint|boolean): string => {
     let number = BigInt(integer);
     let emojiNumber = "";
 
@@ -37,7 +37,7 @@ const encode = (integer) => {
         const d = number / BASE;
         const r = number % BASE;
         number = d;
-        emojiNumber = EMOJIS[r] + emojiNumber;
+        emojiNumber = EMOJIS[Number(r)] + emojiNumber;
     }
 
     return emojiNumber;
@@ -48,8 +48,10 @@ const encode = (integer) => {
  * @param {String} emojiNumber Emoji string
  * @returns {bigint}
  */
-const decode = (emojiNumber) => {
+const decode = (emojiNumber: string): bigint => {
     const split = emojiNumber.match(EMOJI_SPLIT_RE);
+    if (split === null) return BigInt(-1);
+
     let length = split.length;
     const digits = length;
     let number = BigInt(0);
@@ -63,4 +65,7 @@ const decode = (emojiNumber) => {
     return number;
 }
 
-module.exports = { encode, decode };
+export {
+    encode,
+    decode
+};
